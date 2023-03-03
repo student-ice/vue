@@ -1,25 +1,23 @@
-<template>
-  <router-link to="/">首页</router-link> | 
-  <router-link to="/about">关于</router-link>
-  <router-view></router-view>
+<template>  
+  <home-page></home-page>
 </template>
 
 <script>
+import HomePage from "./views/HomePage.vue"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-  }
-}
+    HomePage,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#App {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+
 }
 </style>
