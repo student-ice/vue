@@ -1,15 +1,39 @@
 import {createRouter, createWebHistory} from "vue-router"
-import HomePage from "../views/HomePage"
-import AboutPage from '@/views/AboutPage'
+//import homePage from "../components/layout/HomePage"
+import homeView from "../views/homeView.vue"
+import musicList from "../views/musicList.vue"
+import mv from "../views/MV.vue"
+import signer from "../views/signeR.vue"
+import mylove from "../views/myLove.vue"
 
 const routes = [
     {
-        path: "/",
-        component: HomePage
+        path: '/', 
+        redirect: '/home'
     },
     {
-        path: "/about",
-        component: AboutPage
+        path: "/home",
+        component: homeView
+    },
+    {
+        path: "/ranking",
+        component: () => import("../views/rankingList")
+    },
+    {
+        path: "/musicList",
+        component: musicList
+    },
+    {
+        path: "/mv",
+        component: mv
+    },
+    {
+        path: "/signer",
+        component: signer
+    },
+    {
+        path: "/mylove",
+        component: mylove
     }
 ]
 

@@ -1,23 +1,7 @@
-<template>  
+<template>
   <home-page></home-page>
 </template>
 
-<script>
-import HomePage from "./views/HomePage.vue"
-
-export default {
-  name: "App",
-  components: {
-    HomePage,
-  },
-};
+<script setup>
+import HomePage from "./components/layout/HomePage.vue";
 </script>
-
-<style>
-#App {
-  width: 100%;
-  height: 100vh;
-  padding: 0;
-
-}
-</style>
