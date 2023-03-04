@@ -1,1 +1,5 @@
 # vue
+
+```
+npm install
+```

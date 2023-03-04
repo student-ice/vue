@@ -3,7 +3,7 @@
     <el-container class="root-container">
       <el-aside width="115px" height="100vh"><side-bar></side-bar></el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header><header-view></header-view></el-header>
         <el-main> <router-view></router-view></el-main>
         <el-footer>Footer</el-footer>
       </el-container>
@@ -14,6 +14,7 @@
 <script>
 import api from "../../api/index";
 import SideBar from "./sideBar";
+import headView from "../header/headerView.vue";
 
 export default {
   name: "HelloWorld",
@@ -21,7 +22,7 @@ export default {
     msg: String,
   },
   components() {
-    SideBar;
+    SideBar, headView;
   },
   mounted() {
     api.getBanner().then((res) => {
@@ -43,6 +44,12 @@ export default {
 }
 .el-header {
   background: #845ec2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.el-header.el-input {
+  text-align: center;
 }
 .el-main {
   height: 100%;
