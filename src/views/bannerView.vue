@@ -7,7 +7,10 @@
         width="100%"
         height="100%"
       >
-        <img :src="item.imageUrl" style="height: 100%; width: 100%" />
+        <img
+          :src="item.imageUrl ? item.imageUrl : ''"
+          style="height: 100%; width: 100%"
+        />
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -23,7 +26,7 @@ export default {
       images: [],
     });
     onMounted(() => {
-      api.getBanner().then((res) => {
+      api.getBanner(0).then((res) => {
         //console.log(res.data.banners);
         state.images = res.data.banners;
       });

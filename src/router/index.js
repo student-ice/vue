@@ -4,11 +4,17 @@ import {createRouter, createWebHistory} from "vue-router"
 const routes = [
     {
         path: '/', 
-        redirect: '/home'
+        redirect: '/home',
+        meta: {
+            title: 'ice music'
+        }
     },
     {
         path: "/home",
-        component: () => import("../views/homeView")
+        component: () => import("../views/homeView"),
+        meta: {
+            title: 'ice music'
+        }
     },
     {
         path: "/ranking",

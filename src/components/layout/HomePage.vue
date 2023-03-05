@@ -18,9 +18,9 @@ import SideBar from "./sideBar";
 import headView from "../header/headerView.vue";
 
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
+  name: "HomePage",
+  created() {
+    document.title = "ice music";
   },
   components() {
     SideBar, headView;
