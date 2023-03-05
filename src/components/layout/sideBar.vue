@@ -33,7 +33,7 @@
           <span>{{ menuList[4].name }}</span>
         </el-menu-item>
       </router-link>
-      <router-link to="/mylove">
+      <router-link to="/favourite">
         <el-menu-item index="6">
           <el-icon>
             <svg

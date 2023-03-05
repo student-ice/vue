@@ -1,10 +1,5 @@
 import {createRouter, createWebHistory} from "vue-router"
 //import homePage from "../components/layout/HomePage"
-import homeView from "../views/homeView.vue"
-import musicList from "../views/musicList.vue"
-import mv from "../views/MV.vue"
-import signer from "../views/signeR.vue"
-import mylove from "../views/myLove.vue"
 
 const routes = [
     {
@@ -13,7 +8,7 @@ const routes = [
     },
     {
         path: "/home",
-        component: homeView
+        component: () => import("../views/homeView")
     },
     {
         path: "/ranking",
@@ -21,19 +16,18 @@ const routes = [
     },
     {
         path: "/musicList",
-        component: musicList
+        component: () => import("../views/musicList")
     },
     {
         path: "/mv",
-        component: mv
-    },
+        component: () => import("../views/mvView")    },
     {
         path: "/signer",
-        component: signer
+        component: () => import("../views/signerView")
     },
     {
-        path: "/mylove",
-        component: mylove
+        path: "/favourite",
+        component: () => import("../views/favouriteView")
     }
 ]
 
