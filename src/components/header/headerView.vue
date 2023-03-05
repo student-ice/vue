@@ -14,11 +14,3 @@ import { ref } from "vue";
 import { Search } from "@element-plus/icons-vue";
 const input1 = ref("");
 </script>
-
-<style>
-.search {
-  height: 30px;
-  position: relative;
-  display: flex;
-}
-</style>

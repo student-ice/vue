@@ -8,3 +8,37 @@ html,body, #App{
 a{
   text-decoration: none;
 }
+.search {
+  height: 30px;
+  position: relative;
+  display: flex;
+}
+.common-layout {
+  width: 100%;
+  height: 100%;
+}
+.tac {
+  width: 115px;
+}
+.root-container {
+  height: 100vh;
+}
+.el-header {
+  background: #845ec2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.search .el-input  {
+  text-align: center;
+}
+.el-main {
+  height: 100%;
+  background: #d65db1;
+}
+.el-footer {
+  background: #ff9671;
+}
+.el-carousel__item, .el-carousel__item img{
+  border-radius: 10px;
+}
