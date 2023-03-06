@@ -7,15 +7,16 @@
         <el-scrollbar>
           <el-main> <router-view></router-view></el-main>
         </el-scrollbar>
-        <el-footer>Footer</el-footer>
+        <el-footer><footer-view></footer-view></el-footer>
       </el-container>
     </el-container>
   </div>
 </template>
 
 <script>
-import SideBar from "./sideBar";
+import SideBar from "../side/sideBar";
 import headView from "../header/headerView.vue";
+import footerView from "../footer/footerView.vue";
 
 export default {
   name: "HomePage",
@@ -23,7 +24,7 @@ export default {
     document.title = "ice music";
   },
   components() {
-    SideBar, headView;
+    SideBar, headView, footerView;
   },
   mounted() {},
 };

@@ -1,11 +1,5 @@
 <template>
-  <Component
-    :is="icon"
-    :size="size"
-    :spin="spin"
-    :fill="fill"
-    :strokeWidth="strokeWidth"
-  />
+  <Component :is="icon" :spin="spin" :fill="fill" :strokeWidth="strokeWidth" />
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
   <title-components title="推荐新音乐"></title-components>
   <div
-    class="grid grid-flow-row grid-cols-2 2xl:grid-cols-5 gap-y-2.5 gap-x-5 cursor-pointer"
+    class="grid grid-flow-row grid-cols-2 2xl:grid-cols-5 gap-y-2.5 gap-x-5 cursor-pointer ml-5 mr-5"
   >
     <template v-if="state.personalizedNewSongs.length != 0">
       <div
