@@ -18,6 +18,11 @@ const routes = [
         }
     },
     {
+        path: "/phone",
+        name: "phone",
+        component: () => import("../components/layout/m_HomePage")
+    },
+    {
         path: "/ranking",
         name: "ranking",
         component: () => import("../views/rankingList")
@@ -56,4 +61,15 @@ const router = createRouter({
     routes
 })
 
+router.beforeEach((to, from, next) => {
+    // console.log(to.path)
+    if (to.path === '/') {
+      if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+        next({path: '/phone'})
+      } else {
+        next({path: '/home'})
+      }
+    }
+   }
+)
 export default router;
