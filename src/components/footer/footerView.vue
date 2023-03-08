@@ -2,18 +2,19 @@
   <div class="flex flex-col items-stretch h-20">
     <player-silder></player-silder>
     <div class="flex grow px-5 items-center">
+      <div class="flex-1"><play-song></play-song></div>
       <div class="flex-1">
-        <PlayerSong />
+        <play-controller></play-controller>
       </div>
       <div class="flex-1">
-        <PlayerController />
-      </div>
-      <div class="flex-1">
-        <PlayerAction />
+        <player-action></player-action>
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import playerSilder from "@/components/footer/playerSilder";
+import playSong from "@/components/footer/playSong.vue";
+import playController from "@/components/footer/playController.vue";
+import playerAction from "./playerAction.vue";
 </script>

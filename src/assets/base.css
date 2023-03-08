@@ -14,7 +14,7 @@ img{
   object-fit: cover;
 }
 img, svg, video, canvas, audio, iframe, embed, object {
-  display: block;
+  display: flex;
   vertical-align: middle;
 }
 .div{
@@ -46,7 +46,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
   grid-auto-flow: row;
 }
 .grid-cols-3 {
-  grid-template-columns: repeat(10, minmax(0, 2fr));
+  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 .gap-5 {
   gap: 1.25rem;
@@ -55,12 +55,19 @@ img, svg, video, canvas, audio, iframe, embed, object {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 .cover-play-image .el-image{
+  position:relative;
+  top: 50%;
+  bottom: 50%;
+  min-width: 100%;
+  min-height: 100%;
+}
+.cover-play-image .el-image img{
   position:relative;
   top: 50%;
   bottom: 50%;
@@ -72,6 +79,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .transition-opacity {
   transition-property: opacity;
@@ -181,19 +191,14 @@ img, svg, video, canvas, audio, iframe, embed, object {
   height: 100vh;
 }
 .el-header {
-  background: #845ec2;
   text-align: center;
   display: flex;
   align-items: center;
-}
-.search .el-input  {
-  text-align: center;
 }
 .el-main {
   height: 100%;
 }
 .el-footer {
-  background: #ff9671;
   height: 5rem;
 }
 .el-carousel__item, .el-carousel__item img{
@@ -212,19 +217,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
   vertical-align:middle;
   text-align: center;
 }
-.eel-menu-item.is-activel-menu{
+.el-menu-item.is-activel-menu{
   text-align: center;
 }
-.ml-5{
-  margin-left: 5px;
-}
-.mr-5{
-  margin-right: 5px;
-}
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .el-slider {
   --el-slider-main-bg-color: var(--el-color-primary);
   --el-slider-runway-bg-color: var(--el-border-color-light);
@@ -240,6 +235,20 @@ img, svg, video, canvas, audio, iframe, embed, object {
   display: flex;
   align-items: center;
 }
+.search .el-input  {
+  text-align: center;
+}
+.ml-5{
+  margin-left: 5px;
+}
+.mr-5{
+  margin-right: 5px;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+
 .player-slider .el-slider {
   height: 10px;
 }
@@ -306,4 +315,12 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .lg\:grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+/* 播放按钮颜色 */
+.text-emerald-400 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity));
+}
+.playaction-list{
+  margin-left: 10px;
 }

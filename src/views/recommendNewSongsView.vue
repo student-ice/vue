@@ -9,9 +9,9 @@
         :key="index"
         class="hover-bg-view transition-all flex items-center"
       >
-        <img
+        <icon-park
           :src="item.picUrl"
-          alt=""
+          :fill="fill"
           class="w-12 h-12 object-cover rounded flex-shrink-0"
         />
         <div class="px-2 text-xs flex-auto flex flex-col w-1/3">
@@ -28,6 +28,7 @@
 import { reactive, onMounted } from "vue";
 import titleComponents from "@/components/common/titleComponents";
 import api from "../api/index";
+import iconPark from "@/components/common/iconPark.vue";
 
 const state = reactive({
   personalizedNewSongs: [],

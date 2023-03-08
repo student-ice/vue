@@ -11,6 +11,7 @@ const routes = [
     },
     {
         path: "/home",
+        name: "home",
         component: () => import("../views/homeView"),
         meta: {
             title: 'ice music'
@@ -18,14 +19,17 @@ const routes = [
     },
     {
         path: "/ranking",
+        name: "ranking",
         component: () => import("../views/rankingList")
     },
     {
         path: "/musicList",
+        name: "musicList",
         component: () => import("../views/musicList")
     },
     {
         path: "/mv",
+        name: "MV",
         component: () => import("../views/mvView")    },
     {
         path: "/signer",

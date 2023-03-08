@@ -1,7 +1,7 @@
 <template>
   <div class="common-layout">
     <el-container class="root-container">
-      <el-aside width="200px" height="100vh"><side-bar></side-bar></el-aside>
+      <el-aside height="100vh" width="250px"><side-bar></side-bar></el-aside>
       <el-container>
         <el-header><header-view></header-view></el-header>
         <el-scrollbar>

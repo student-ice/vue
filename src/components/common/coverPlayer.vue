@@ -10,17 +10,14 @@
 </template>
 
 <script>
-import iconpark from "./iconPark.vue";
 export default {
   props: {
     picUrl: String,
     playCount: Number,
     name: String,
+    fill: String,
     showPlayCount: Boolean,
     video: Boolean,
-  },
-  components() {
-    iconpark;
   },
 };
 </script>

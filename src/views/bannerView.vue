@@ -7,9 +7,10 @@
         width="100%"
         height="100%"
       >
-        <img
+        <el-image
           :src="item.imageUrl ? item.imageUrl : ''"
           style="height: 100%; width: 100%"
+          fit="fill"
         />
       </el-carousel-item>
     </el-carousel>
