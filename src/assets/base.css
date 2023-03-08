@@ -197,6 +197,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .el-main {
   height: 100%;
+  width: 100%;
 }
 .el-footer {
   height: 5rem;
