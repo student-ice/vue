@@ -14,29 +14,17 @@
         </div>
       </div>
       <div class="flex gap-x-3 text-main">
-        <icon-park
-          :icon="Like"
-          size="18"
-          :stroke-width="3"
-          class="text-slate-400 hover-text"
-        ></icon-park>
-        <icon-park
-          :icon="DownTwo"
-          size="18"
-          :stroke-width="3"
-          class="text-slate-400 hover-text"
-        ></icon-park>
-        <icon-park
-          :icon="MoreTwo"
-          size="18"
-          :stroke-width="3"
-          class="text-slate-400 hover-text"
-        ></icon-park>
+        <n-icon size="18" class="text-slate-400 hover-text">
+          <Like />
+        </n-icon>
+        <n-icon size="18" class="text-slate-400 hover-text">
+          <Download />
+        </n-icon>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import { Like, DownTwo, MoreTwo } from "@icon-park/vue-next";
-import iconPark from "@/components/common/iconPark";
+import { NIcon } from "naive-ui";
+import { Heart as Like, Download } from "@vicons/tabler";
 </script>

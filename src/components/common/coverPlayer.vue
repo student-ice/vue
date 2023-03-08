@@ -1,8 +1,8 @@
 <template>
   <div class="cover-play-image">
-    <el-image
+    <n-image
       :src="picUrl"
-      :fit="fill"
+      :object-fit="fill"
       :alt="name"
       class="w-full bg-gray-50 object-cover"
     />
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { NImage } from "naive-ui";
 export default {
   props: {
     picUrl: String,
@@ -18,6 +19,9 @@ export default {
     fill: String,
     showPlayCount: Boolean,
     video: Boolean,
+  },
+  component: {
+    NImage,
   },
 };
 </script>

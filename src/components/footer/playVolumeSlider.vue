@@ -1,34 +1,18 @@
 <template>
   <div class="player-volume flex flex-col items-center pt-2">
-    <div>
-      <el-slider
-        vertical
-        height="100px"
-        :show-tooltip="false"
-        v-model="volume"
-        :max="100"
-        :min="0"
-        size="small"
-        :disabled="muted"
-      />
-    </div>
-    <div class="text-sm mt-3">{{ volume }}</div>
+    <n-space vertical>
+      <n-slider :default-value="77" :max="100" :min="0" vertical />
+    </n-space>
+
     <div class="mt-2">
-      <icon-park
-        :icon="muted ? VolumeMute : VolumeSmall"
-        size="16"
-        theme="filled"
-        class="hover-text"
-      ></icon-park>
+      <n-icon size="16" class="hover-text">
+        <Volume />
+      </n-icon>
     </div>
   </div>
 </template>
 <script setup>
-import { VolumeMute, VolumeSmall } from "@icon-park/vue-next";
-import iconPark from "../common/iconPark.vue";
+import { NIcon, NSlider, NSpace } from "naive-ui";
+import { Volume } from "@vicons/tabler";
 </script>
-<style>
-.el-popover.el-popper {
-  min-width: auto;
-}
-</style>
+<style></style>

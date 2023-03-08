@@ -11,6 +11,7 @@
         <cover-player
           :name="item.name"
           :picUrl="item.picUrl"
+          :object-fit="fill"
           :play-count="item.playCount"
         ></cover-player>
         <div class="mt-2 text-xs text-main truncate">{{ item.name }}</div>
@@ -24,6 +25,7 @@ import { reactive, onMounted } from "vue";
 import coverPlayer from "../components/common/coverPlayer.vue";
 import titleComponents from "@/components/common/titleComponents";
 
+const fill = "fill";
 const state = reactive({
   personalized: [],
 });
