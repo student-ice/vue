@@ -260,8 +260,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
 .mr-1 {
   margin-right: 0.25rem;
 }
+/* 专属歌单 列数 */
 .lg\:grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 /* 播放按钮颜色 */
 .text-emerald-400 {

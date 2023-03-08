@@ -31,7 +31,7 @@ const state = reactive({
 });
 onMounted(() => {
   api
-    .getPersonalized(10)
+    .getPersonalized(24)
     .then((res) => {
       console.log(res.data.result);
       state.personalized = res.data.result;
