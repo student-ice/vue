@@ -5,8 +5,30 @@ import { defineStore } from 'pinia'
 export const useMusicStateStore = defineStore('musicState', {
   // 其他配置...
   state: ()=>({
+    playList:[
+      {
+        name: "",
+        id: Number,
+        al:{
+          id: Number,
+          name: "",
+          pic: Number,
+          picUrl: "",
+          pic_str: ""
+        }
+      }
+      
+
+    ],
     playState: false,
-    currentSongUrl: 'https://music.163.com/song/media/outer/url?id=1999552137.mp3'
+    currentSongUrl: 'https://music.163.com/song/media/outer/url?id=1999552137.mp3',
+    isVip: false,
+    autoplay: false,
+    playMusicName: "开源云音乐",
+    picUrl: 'http://p1.music.126.net/ZpXdmuJr5NLyioAWmEEfCg==/109951168437112714.jpg',//歌曲封面
+    musicCurrentTime: 0, //歌曲当前时长
+    musicDuration: 0,    //歌曲总时长
+    musicFee: 0,  //0: 免费或无版权 | 1: VIP 歌曲 | 4: 购买专辑 | 8: 非会员可免费播放低音质，会员可播放高音质及下载
   }),
   //计算属性
   getters:{

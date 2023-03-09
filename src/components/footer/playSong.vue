@@ -1,16 +1,12 @@
 <template>
   <div class="flex player-song">
-    <img
-      alt=""
-      class="w-11 h-11 rounded"
-      :src="`http://p1.music.126.net/ZpXdmuJr5NLyioAWmEEfCg==/109951168437112714.jpg`"
-    />
+    <img alt="" class="w-11 h-11 rounded" :src="picUrl" />
     <div class="ml-2 text-xs flex flex-col justify-between">
       <div class="w-52 2xl:w-96 cursor-pointer truncate">
-        <div class="flex">
-          <div class="bg-red-500 text-xs text-white rounded px-0.5 scale-75">试听</div>
-          <span>{{ "开源云音乐" }}</span>
+        <div class="flex items-center">
+          <span>{{ playMusicName }}</span>
           <span class="ml-2 text-dc"> </span>
+          <n-tag type="error" size="small" v-if="musicState.isVip"> VIP </n-tag>
         </div>
       </div>
       <div class="flex gap-x-3 text-main">
@@ -25,6 +21,14 @@
   </div>
 </template>
 <script setup>
-import { NIcon } from "naive-ui";
+import { NIcon, NTag } from "naive-ui";
 import { Heart as Like, Download } from "@vicons/tabler";
+import { useMusicStateStore } from "@/store";
+import { storeToRefs } from "pinia";
+
+const musicStateStore = useMusicStateStore();
+
+const { playMusicName, picUrl } = storeToRefs(musicStateStore);
+
+const musicState = useMusicStateStore();
 </script>

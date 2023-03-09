@@ -1,5 +1,18 @@
 <template>
-  <div class="player-slider">
-    <el-slider :show-tooltip="false" :min="0" />
+  <div class="flex items-center justify-center">
+    <span style="margin-right: 10px">{{ musicCurrentTime }}</span
+    ><n-slider :max="musicDuration" :min="0" :value="musicCurrentTime" /><span
+      style="margin-left: 10px"
+      >{{ musicDuration }}</span
+    >
   </div>
 </template>
+
+<script setup>
+import { useMusicStateStore } from "@/store";
+import { storeToRefs } from "pinia";
+import { NSlider } from "naive-ui";
+
+const musicState = useMusicStateStore();
+const { musicDuration, musicCurrentTime } = storeToRefs(musicState);
+</script>

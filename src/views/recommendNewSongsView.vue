@@ -8,9 +8,11 @@
         v-for="(item, index) in state.personalizedNewSongs"
         :key="index"
         class="hover-bg-view transition-all flex items-center"
+        v-on:click="play(index)"
       >
         <n-image
           :src="item.picUrl"
+          :preview-disabled="true"
           class="w-12 h-12 object-cover rounded flex-shrink-0"
           lazy
         />
@@ -29,7 +31,13 @@ import { reactive, onMounted } from "vue";
 import titleComponents from "@/components/common/titleComponents";
 import api from "../api/index";
 import { NImage } from "naive-ui";
+import { useMusicStateStore } from "@/store";
+import { storeToRefs } from "pinia";
 
+const musicPlayState = useMusicStateStore();
+const { currentSongUrl, autoplay, playState, playMusicName, picUrl, isVip } = storeToRefs(
+  musicPlayState
+);
 const state = reactive({
   personalizedNewSongs: [],
 });
@@ -44,4 +52,22 @@ onMounted(() => {
       console.log(error);
     });
 });
+function play(index) {
+  //console.log(state.personalizedNewSongs[0].id);
+  api.getMusicUrl(state.personalizedNewSongs[index].id).then((res) => {
+    //console.log(res.data.data[0]);
+
+    currentSongUrl.value = res.data.data[0].url;
+    autoplay.value = true;
+    playState.value = true;
+  });
+  api.getMusicDetail(state.personalizedNewSongs[index].id).then((res) => {
+    console.log(res.data.songs[0]);
+    playMusicName.value = res.data.songs[0].name;
+    picUrl.value = res.data.songs[0].al.picUrl;
+    if (res.data.songs[0].fee === "1") {
+      isVip.value = true;
+    }
+  });
+}
 </script>

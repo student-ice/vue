@@ -10,6 +10,15 @@ const api = {
     },
     getPersonalizedNewSongs(count){
         return axios.get(base.baseUrl + base.personalizedNewSongs + "?limit=" + count);
+    },
+    getMusicUrl(id){
+        return axios.get(base.baseUrl + base.musicUrl + "?id=" + id + "&level=exhigh");
+    },
+    getMusicDetail(id){
+        return axios.get(base.baseUrl + base.musicDetail + "?ids=" + id);
+    },
+    getMusicListDetail(id){
+        return axios.get(base.baseUrl + base.musicListDetail + "?id=" + id);
     }
 }
 

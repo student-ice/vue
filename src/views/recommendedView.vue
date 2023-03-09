@@ -8,13 +8,15 @@
         :key="index"
         :class="{ 'item-1': index === 0 }"
       >
-        <cover-player
-          :name="item.name"
-          :picUrl="item.picUrl"
-          :object-fit="fill"
-          :play-count="item.playCount"
-        ></cover-player>
-        <div class="mt-2 text-xs text-main truncate">{{ item.name }}</div>
+        <router-link :to="{ name: 'musiclistdetail', query: { id: item.id } }">
+          <cover-player
+            :name="item.name"
+            :picUrl="item.picUrl"
+            :object-fit="fill"
+            :play-count="item.playCount"
+          ></cover-player>
+          <div class="mt-2 text-xs text-main truncate">{{ item.name }}</div>
+        </router-link>
       </div>
     </div>
   </div>

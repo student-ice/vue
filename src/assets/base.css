@@ -215,10 +215,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
 .ml-2 {
   margin-left: 0.5rem;
 }
-
-
-.player-slider .el-slider {
-  height: 10px;
+.n-slider  {
+  display: flex;
+  flex-direction: row;
 }
 .px-5 {
   padding-left: 1.25rem;
@@ -262,7 +261,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 /* 专属歌单 列数 */
 .lg\:grid-cols-5 {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 /* 播放按钮颜色 */
 .text-emerald-400 {

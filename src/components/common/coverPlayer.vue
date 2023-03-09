@@ -4,6 +4,7 @@
       :src="picUrl"
       :object-fit="fill"
       :alt="name"
+      :preview-disabled="true"
       class="w-full bg-gray-50 object-cover"
     />
   </div>
