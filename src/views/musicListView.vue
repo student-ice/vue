@@ -47,7 +47,7 @@ const {
 onMounted(() => {
   let id = useRoute().query.id;
   api.getMusicListDetail(id).then((res) => {
-    console.log(res.data.playlist);
+    //console.log(res.data.playlist);
     let playList = res.data.playlist;
     playListCoverImgUrl.value = playList.coverImgUrl;
     playListName.value = playList.name;
@@ -56,7 +56,7 @@ onMounted(() => {
       playList.creator.avatarDetail.identityIconUrl;
   });
   api.getMusicListTrackAll(id).then((res) => {
-    console.log(res.data);
+    console.log(res.data.songs);
     playListMusic.value = res.data.songs;
   });
 });

@@ -8,10 +8,10 @@ import naive from 'naive-ui'
 
 
 
+
 const app = createApp(App)
 const pina = createPinia()
 app.use(router)
-
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }

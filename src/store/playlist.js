@@ -7,6 +7,6 @@ export const usePlayListStore = defineStore('playliststate',{
         playListName: '',
         playListCreatorNickname: '',
         playListCreatorAvatarDetailIdentityIconUrl: '',
-        playListMusic: [],
+        playListMusic: Array,
     })
 })
