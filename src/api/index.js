@@ -19,6 +19,9 @@ const api = {
     },
     getMusicListDetail(id){
         return axios.get(base.baseUrl + base.musicListDetail + "?id=" + id);
+    },
+    getMusicListTrackAll(id){
+        return axios.get(base.baseUrl + base.musicListAllMusic + "?id=" + id);
     }
 }
 

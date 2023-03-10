@@ -25,6 +25,7 @@ export const useMusicStateStore = defineStore('musicState', {
     isVip: false,
     autoplay: false,
     playMusicName: "开源云音乐",
+    musicArtist: "歌手",
     picUrl: 'http://p1.music.126.net/ZpXdmuJr5NLyioAWmEEfCg==/109951168437112714.jpg',//歌曲封面
     musicCurrentTime: 0, //歌曲当前时长
     musicDuration: 0,    //歌曲总时长

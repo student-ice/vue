@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center">
     <span style="margin-right: 10px">{{ musicCurrentTime }}</span
-    ><n-slider :max="musicDuration" :min="0" :value="musicCurrentTime" /><span
+    ><n-slider :max="musicDuration" :step="1" :min="0" :value="musicCurrentTime" /><span
       style="margin-left: 10px"
       >{{ musicDuration }}</span
     >

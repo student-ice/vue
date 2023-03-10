@@ -35,9 +35,15 @@ import { useMusicStateStore } from "@/store";
 import { storeToRefs } from "pinia";
 
 const musicPlayState = useMusicStateStore();
-const { currentSongUrl, autoplay, playState, playMusicName, picUrl, isVip } = storeToRefs(
-  musicPlayState
-);
+const {
+  currentSongUrl,
+  autoplay,
+  playState,
+  playMusicName,
+  picUrl,
+  isVip,
+  musicArtist,
+} = storeToRefs(musicPlayState);
 const state = reactive({
   personalizedNewSongs: [],
 });
@@ -68,6 +74,7 @@ function play(index) {
     if (res.data.songs[0].fee === "1") {
       isVip.value = true;
     }
+    musicArtist.value = res.data.songs[0].ar[0].name;
   });
 }
 </script>

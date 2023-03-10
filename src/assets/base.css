@@ -53,7 +53,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 .gap-5 {
-  gap: 1.25rem;
+  gap: 3rem;
 }
 .cover-play-image {
   position: relative;
@@ -83,6 +83,10 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-left {
+  justify-content: flex-start;
+  
 }
 .justify-end {
   justify-content: flex-end;
@@ -138,6 +142,12 @@ img, svg, video, canvas, audio, iframe, embed, object {
 .w-12 {
   width: 4rem;
 }
+.w-25{
+  width:25%;
+}
+.w-10{
+  width: 10%;
+}
 .h-12 {
   height: 4rem;
 }
@@ -146,6 +156,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+.flex-auto{
+  flex: 1 1 auto;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -270,4 +283,16 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .playaction-list{
   margin-left: 10px;
+}
+.mr-left{
+  margin-left:20px;
+}
+.text-title-size{
+  font-size: 20px;
+}
+.text-artist-size{
+  font-size: 18px;
+}
+.el-tabs__nav-scroll .el-tabs__nav .el-tabs__item{
+  font-size: 20px ;
 }
