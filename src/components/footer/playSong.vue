@@ -13,10 +13,12 @@
         <div class="flex items-center">
           <span>{{ playMusicName }}</span>
 
-          <n-tag type="error" size="small" v-if="isVip"> VIP </n-tag>
+          <n-tag type="error" size="small" v-if="isVip" style="margin-left: 5px">
+            VIP
+          </n-tag>
         </div>
       </div>
-      <span class="ml-2 text-dc">{{ musicArtist }}</span>
+      <span class="text-dc">{{ musicArtist }}</span>
       <div class="flex gap-x-3 text-main">
         <n-icon size="18" class="text-slate-400 hover-text">
           <Like />

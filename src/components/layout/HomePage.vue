@@ -1,11 +1,13 @@
 <template>
   <div class="common-layout">
     <el-container class="root-container">
-      <el-aside height="100%" width="250px"><side-bar></side-bar></el-aside>
+      <!-- <el-aside height="100%" width="250px"><side-bar></side-bar></el-aside> -->
       <el-container>
         <el-header><header-view></header-view></el-header>
         <el-scrollbar>
-          <el-main> <router-view></router-view></el-main>
+          <el-main
+            ><transitions> <router-view></router-view></transitions
+          ></el-main>
         </el-scrollbar>
         <el-footer><footer-view></footer-view></el-footer>
       </el-container>

@@ -52,22 +52,7 @@ const {
   isVip,
   musicArtist,
 } = storeToRefs(musicStore);
-// function time(dt) {
-//   var t;
-//   var f = Math.floor(dt / 1000 / 60);
-//   console.log(f);
-//   var m = dt % 60;
-//   console.log(m);
-//   if (f < 10) {
-//     t += "0";
-//   }
-//   t += f + ":";
-//   if (m < 10) {
-//     t += "0";
-//   }
-//   t += m.toFixed(2);
-//   return t;
-// }
+
 function playMusic(song) {
   console.log(song);
   api.getMusicUrl(song.id).then((res) => {
@@ -80,8 +65,10 @@ function playMusic(song) {
     console.log(res.data.songs[0]);
     playMusicName.value = res.data.songs[0].name;
     picUrl.value = res.data.songs[0].al.picUrl;
-    if (res.data.songs[0].fee === "1") {
+    if (res.data.songs[0].fee === 1) {
       isVip.value = true;
+    } else {
+      isVip.value = false;
     }
     musicArtist.value = res.data.songs[0].ar[0].name;
   });

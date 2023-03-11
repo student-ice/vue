@@ -29,7 +29,7 @@
         <play-volume-slider></play-volume-slider>
       </el-popover>
       <audio
-        :src="musicPlayState.currentSongUrl"
+        :src="currentSongUrl"
         @canplay="getDuration"
         @timeupdate="updateTime"
         @ended="playEnd"
@@ -58,22 +58,22 @@ import {
 const musicPlayState = useMusicStateStore();
 const audio = ref(null);
 //解构store
-const { playState, autoplay, musicCurrentTime, musicDuration } = storeToRefs(
-  musicPlayState
-);
+const {
+  playState,
+  autoplay,
+  musicCurrentTime,
+  musicDuration,
+  currentSongUrl,
+} = storeToRefs(musicPlayState);
 
 onMounted(() => {});
 function play() {
-  if (!playState) {
+  if (!playState.value) {
     audio.value.play();
-    musicPlayState.$patch((state) => {
-      state.playState = true;
-    });
+    playState.value = true;
   } else {
     audio.value.pause();
-    musicPlayState.$patch((state) => {
-      state.playState = false;
-    });
+    playState.value = false;
   }
 }
 //获取音乐总时长
