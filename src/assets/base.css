@@ -111,6 +111,10 @@ img, svg, video, canvas, audio, iframe, embed, object {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -295,4 +299,25 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 .el-tabs__nav-scroll .el-tabs__nav .el-tabs__item{
   font-size: 20px ;
+}
+
+.m_main{
+  
+}
+.songlist-items{
+  padding-left: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.songlist-items:hover {
+  background-color: rgb(52, 211 ,153,0.3);
+}
+.songlist-item:hover{
+  color: #757575;
+}
+.w-30{
+  width: 30%;
+}
+.w-35{
+  width:35%;
 }

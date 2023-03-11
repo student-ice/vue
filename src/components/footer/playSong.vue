@@ -13,7 +13,7 @@
         <div class="flex items-center">
           <span>{{ playMusicName }}</span>
 
-          <n-tag type="error" size="small" v-if="musicState.isVip"> VIP </n-tag>
+          <n-tag type="error" size="small" v-if="isVip"> VIP </n-tag>
         </div>
       </div>
       <span class="ml-2 text-dc">{{ musicArtist }}</span>
@@ -39,4 +39,5 @@ const musicStateStore = useMusicStateStore();
 const { playMusicName, picUrl, musicArtist } = storeToRefs(musicStateStore);
 
 const musicState = useMusicStateStore();
+const { isVip } = storeToRefs(musicState);
 </script>

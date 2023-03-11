@@ -1,9 +1,31 @@
 <template>
   <div class="flex items-center justify-center">
-    <span style="margin-right: 10px">{{ musicCurrentTime }}</span
+    <span style="margin-right: 10px">{{
+      musicCurrentTime / 1000 / 60 < 10
+        ? "0" +
+          Math.floor(musicCurrentTime / 1000 / 60) +
+          (musicCurrentTime % 60 < 10
+            ? ":0" + Math.floor(musicCurrentTime % 60)
+            : ":" + Math.floor(musicCurrentTime % 60))
+        : Math.floor(musicCurrentTime / 1000 / 60) +
+          (musicCurrentTime % 60 < 10
+            ? ":0" + Math.floor(musicCurrentTime % 60)
+            : ":" + Math.floor(musicCurrentTime % 60))
+    }}</span
     ><n-slider :max="musicDuration" :step="1" :min="0" :value="musicCurrentTime" /><span
       style="margin-left: 10px"
-      >{{ musicDuration }}</span
+      >{{
+        musicDuration / 60 < 10
+          ? "0" +
+            Math.floor(musicDuration / 60) +
+            (musicDuration % 60 < 10
+              ? ":0" + Math.floor(musicDuration % 60)
+              : ":" + Math.floor(musicDuration % 60))
+          : Math.floor(musicDuration / 60) +
+            (musicDuration % 60 < 10
+              ? ":0" + Math.floor(musicDuration % 60)
+              : ":" + Math.floor(musicDuration % 60))
+      }}</span
     >
   </div>
 </template>

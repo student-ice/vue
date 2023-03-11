@@ -21,7 +21,7 @@ export const useMusicStateStore = defineStore('musicState', {
 
     ],
     playState: false,
-    currentSongUrl: 'https://music.163.com/song/media/outer/url?id=1999552137.mp3',
+    currentSongUrl: '',
     isVip: false,
     autoplay: false,
     playMusicName: "开源云音乐",
