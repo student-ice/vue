@@ -5,14 +5,11 @@ import "./assets/base.css"
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import { createPinia } from 'pinia'
 import naive from 'naive-ui'
-import { NavBar } from "vant";
-import 'vant/lib/index.css';
-
+import "@nutui/nutui/dist/style.css";
 
 const app = createApp(App)
 const pina = createPinia()
 app.use(router)
-app.use(NavBar)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
